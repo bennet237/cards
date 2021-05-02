@@ -1,5 +1,7 @@
 {
   "name": "WhatsApp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

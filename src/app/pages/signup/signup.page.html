@@ -1,0 +1,49 @@
+<ion-content>
+    <form>
+  
+      <div id="back-button">
+        <ion-back-button defaultHref="/" type="button" text=""></ion-back-button>
+      </div>
+      <ion-item class="first-row" lines="none">
+        <!--<ion-avatar> 
+          <img src="assets/images/dazai.png" alt="Dazai" />
+        </ion-avatar>-->
+      </ion-item>
+      <!--<ion-header>
+        <ion-toolbar>
+          <img src="assets/images/dazai.png" alt="Dazai" height="150" width="200" />
+        </ion-toolbar>
+      </ion-header>-->
+      <ion-item class="second-row" lines="none">
+        <ion-label>
+          <h1>WELCOME</h1>
+          <h2>Sign up by entering the info below</h2>
+        </ion-label>
+      </ion-item>
+      <div class="input-group">
+        <ion-item>
+            <ion-icon name="person-circle"></ion-icon>
+            <ion-input type="text" placeholder="Full name" name="username" [(ngModel)]="postData.username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="mail"></ion-icon>
+          <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="postData.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="bag"></ion-icon>
+          <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="postData.password"></ion-input>
+        </ion-item>
+      </div>
+      <div class="submit-group">
+        <ion-button type="submit" expand="round" fill="outline" id="sign-up-button" (click)="signUpAction()">Sign up!</ion-button>
+        <ion-button type="submit" expand="block" fill="outline">
+          <ion-icon name="logo-google" slot="start"></ion-icon>
+          Sign up with Google
+        </ion-button>
+        <ion-button type="submit" expand="block" fill="outline">
+          <ion-icon name="logo-facebook" slot="start"></ion-icon>
+          Sign up with Facebook
+        </ion-button>
+      </div>
+    </form>
+  </ion-content>

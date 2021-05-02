@@ -1,0 +1,68 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar id="toolbar">
+    <ion-grid class="ion-no-margin" class="ion-no-padding">
+      <ion-row class="ion-align-items-center">
+
+        <ion-col size="1">
+            <ion-buttons>
+              <ion-back-button defaultHref="/home" class="ion-float-start"></ion-back-button>
+            </ion-buttons>
+        </ion-col>
+
+        <ion-col size="9.5" class="ion-no-padding" class="ion-no-margin">
+          <ion-title class="ion-text-center" id="create">Create Card</ion-title>
+        </ion-col>
+
+        <ion-col size="1.5">
+          <ion-buttons>
+            <ion-button>
+              <ion-icon name="checkmark-sharp"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="ion-text-center">Create</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-grid class="card-grid">
+  <ion-row class="ion-align-items-center" class="ion-justify-content-center">
+    <ion-col> 
+      <div class="flip-container" ontouchstart = "this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+          </div>
+          <div class="back">
+          </div>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<div class="form-group">
+  <form *ngFor="let card of cards">
+    <ion-toolbar id="form">
+      <ion-title id="form-header">Card Info</ion-title>
+    </ion-toolbar>
+    <div id="card-input">
+      <div id="label-group">
+        <ion-label>{{ card.name }}</ion-label>
+      </div>
+      <ion-input type="text" class="ion-no-padding"></ion-input>
+    </div>  
+  </form>
+</div>
+
+</ion-content>
+

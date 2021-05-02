@@ -1,66 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  public home: string;
 
-  constructor() {}
-  cList = [
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/1?v=4",
-      "name": "Joel",
-      "phone_number": "+237 6 51 83 45 45"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/2?v=4",
-      "name": "Fotie",
-      "phone_number": "+237 6 61 83 45 46"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/3?v=4",
-      "name": "Bennet",
-      "phone_number": "+237 6 70 12 82 32"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/4?v=4",
-      "name": "Kate",
-      "phone_number": "+237 6 61 83 45 45"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/5?v=4",
-      "name": "Evar",
-      "phone_number": "+237 6 91 83 45 45"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/6?v=4",
-      "name": "Ante",
-      "phone_number": "+237 6 62 83 45 45"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/7?v=4",
-      "name": "Sam",
-      "phone_number": "+237 6 71 83 45 45"
-    },
-    {
-      "picture": "https://avatars1.githubusercontent.com/u/17?v=4",
-      "name": "Wilkinson",
-      "phone_number": "+237 6 51 83 45 89"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/18?v=4",
-      "name": "Bili",
-      "phone_number": "+237 6 67 56 45 45"
-    },
-    {
-      "picture": "https://avatars0.githubusercontent.com/u/19?v=4",
-      "name": "Evina",
-      "phone_number": "+237 6 64 83 45 36"
-    }
-  ];
+  constructor(private activatedRoute: ActivatedRoute) { }
 
- 
-
+  ngOnInit() {
+    this.home = this.activatedRoute.snapshot.paramMap.get('id');
+  }
 }

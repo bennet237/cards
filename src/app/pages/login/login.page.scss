@@ -1,0 +1,36 @@
+ion-content {
+    --background: rgb(215, 211, 250);
+    --padding-top: 10%;
+    --padding-start:5%;
+    --padding-end: 5%;
+}
+ion-button {
+    --border-color: rgb(101, 64, 233);
+    --color: rgb(101, 64, 233);
+}
+form {
+    background-color: rgb(233, 231, 248);
+    padding: 10%;
+    border-radius: 5%;
+}
+ion-item {
+    --background: rgb(233, 231, 248);
+    --color: rgb(101, 64, 233);
+}
+ion-list {
+    --background:rgb(233, 231, 248);
+}
+ion-back-button {
+    --color: rgb(101, 64, 233);
+}
+#back-button {
+    float: left;
+}
+h1, h2 {
+    text-align: center;
+    padding-top: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+ion-icon {
+    color: rgb(101, 64, 233);
+}

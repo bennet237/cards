@@ -1,0 +1,15 @@
+.title {
+    font-weight: normal;
+    font-size: 23px;
+    color: rgb(101, 64, 233);
+}
+.content {
+   font-size: 30px;
+   margin-top: 10px;
+}
+ion-back-button, ion-title{
+   --color: rgb(101, 64, 233);
+}
+ion-title {
+    font-size: 25px;
+}

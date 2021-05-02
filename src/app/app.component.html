@@ -1,3 +1,38 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  
+    <ion-menu content-id="options" menu-id="menu-left" side="start" type="overlay">
+      <ion-content>
+        <div id="list-header">
+          <ion-list-header>
+            <img src="assets/images/ionic4themes.jpg" />
+          </ion-list-header>
+        </div>
+        <div id="group-one">
+          <ion-menu-toggle auto-hide="false" content-id="options" *ngFor="let option of options.slice(0,2)">
+            <ion-item lines="none" href="/{{ option.link }}"> 
+              <ion-icon [ios]="option.icon + '-outline'" [md]="option.icon + '-outline'" slot="start" size="large" color="{{ option.color }}"></ion-icon>
+              <ion-label>{{ option.name }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </div>
+        <div id="group-two">
+          <ion-menu-toggle auto-hide="false" content-id="options" *ngFor="let option of options.slice(2,5)">
+            <ion-item lines="none" href="/{{ option.link }}">
+              <ion-icon [ios]="option.icon + '-outline'" [md]="option.icon + '-outline'" slot="start" size="large" color="{{ option.color }}"></ion-icon>
+              <ion-label>{{ option.name }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </div>
+      </ion-content>
+    </ion-menu>
+
+    <div id="menu-right">
+    <ion-menu content-id="options" menu-id="menu-right" side="end" type="overlay" class="menu-right">
+      <ion-menu-toggle auto-hide="false" content-id="options">
+        
+      </ion-menu-toggle>
+    </ion-menu>
+  </div>
+  
+  <ion-router-outlet id="options"></ion-router-outlet>
 </ion-app>

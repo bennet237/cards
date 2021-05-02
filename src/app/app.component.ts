@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -24,4 +24,35 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  options = [
+    {
+      icon: "card",
+      url: "/home/Credit cards",
+      name: "Credit cards",
+      color: "success",
+      link: "credit-cards"
+    },
+    {
+      icon: "cart",
+      url: "/home/Transactions",
+      name: "Transactions",
+      color: "secondary",
+      link: "transactions"
+    },
+    {
+      icon: "settings",
+      url: "/home/Settings",
+      name: "Settings",
+      color: "tertiary",
+      link: "settings"
+    },
+    {
+      icon: "help-circle",
+      url: "/home/Help & Feedback",
+      name: "Help & Feedback",
+      color: "warning",
+      link: "help-and-feedback"
+    }
+  ];
 }
